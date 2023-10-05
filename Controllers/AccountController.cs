@@ -5,6 +5,7 @@ namespace TPLogin.Controllers;
 
 public class AccountController : Controller
 {
+    [HttpPost]
     public IActionResult Login(string username, string contraseña)
     {
         Usuario usuarioIniciado = BD.ValidarUsuario(username, contraseña);
@@ -21,6 +22,8 @@ public class AccountController : Controller
             return View();
         }
     }
+
+    [HttpPost]
     public IActionResult Registro(Usuario usuarioNuevo)
     {
         if(usuarioNuevo.Nombre == "" || usuarioNuevo.Nombre == null){
@@ -33,6 +36,8 @@ public class AccountController : Controller
         }
         return View();
     }
+
+    [HttpPost]
     public IActionResult OlvideContraseña(string username, string contraseña)
     {
         if(BD.ModificarContraseña(username, contraseña)){
