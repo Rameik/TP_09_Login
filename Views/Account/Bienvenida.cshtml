@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Bienvenida";
+}
+
+<div class="container-modal">
+    <div class="modal">
+        <h1>Bienvenido @ViewBag.Usuario.Username!</h1>
+
+        <h2>Sus datos:</h2>
+
+        <p><b>Username:</b> @ViewBag.Usuario.Username</p>
+        <p><b>Nombre:</b> @ViewBag.Usuario.Nombre</p>
+        <p><b>Email:</b> @ViewBag.Usuario.Email</p>
+        <p><b>Telefono:</b> @ViewBag.Usuario.Telefono</p>
+    </div>
+</div>

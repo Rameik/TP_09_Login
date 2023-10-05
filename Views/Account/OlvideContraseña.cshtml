@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "Olvide Contraseña";
+}
+
+
+<link rel="stylesheet" href="~/css/loginStyle.css" asp-append-version="true"/>
+<link rel="stylesheet" href="~/css/registroStyle.css" asp-append-version="true"/>
+
+<div class="container-modal">
+    <div class="modal">
+        <form action='@Url.Action("OlvideContraseña", "Account")' method="post" onsubmit="return validarFormulario()">
+            <h1>Olvide mi contraseña</h1>
+
+            @* Espacio para campo texto usuario *@
+
+            <div>
+                <label for="username"><b>Usuario</b></label>
+                <input type="text" placeholder="Ingresa tu usuario" name="username" required>
+            </div>
+
+            @* Espacio para campo texto contraseña nueva *@
+
+            <div>
+                <label for="contraseña"><b>Nueva Contraseña</b></label>
+                <input type="password" placeholder="Ingresa tu nueva contraseña" name="contraseña" id="contraseña" required>
+                <div class="condiciones">
+                    <p id="caracteres">La contraseña debe tener 8 o más caracteres</p>
+                    <p id="mayuscula">La contraseña debe tener, por lo menos 1 mayúscula</p>
+                    <p id="cespecial">La contraseña debe tener, por lo menos 1 carácter especial</p>
+                </div>
+            </div>
+
+            @* Espacio para campo texto contraseña segunda vez*@
+
+            <div>
+                <label for="contraseña2"><b>Repetir Contraseña</b></label>
+                <input type="password" placeholder="Ingresa tu nueva contraseña otra vez" name="contraseña2" id="contraseña2" required>
+                <div class="condiciones">
+                    <p id="coincidir">Las contraseñas deben coincidir</p>
+                </div>
+            </div>
+
+            <p style="color: red;">@ViewBag.Error</p>
+            <p style="color: green;">@ViewBag.Exito</p>
+            <p id="mostrar-error" style="color: red;"></p>
+
+            <input type="submit" value="Restablecer contraseña">
+        </form>
+    </div>
+</div>
+
+<script src="~/js/registro.js" asp-append-version="true"></script>
+<script src="~/js/cambio-contraseña.js" asp-append-version="true"></script>

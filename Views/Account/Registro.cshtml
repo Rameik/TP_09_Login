@@ -1,0 +1,85 @@
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<link rel="stylesheet" href="~/css/registroStyle.css" asp-append-version="true"/>
+<link rel="stylesheet" href="~/css/loginStyle.css" asp-append-version="true"/>
+
+<div class="container-modal">
+    <div class="modal">
+        <form action='@Url.Action("Registro", "Account")' method="post" id="form-registro" onsubmit="return validarFormulario()">
+            <h1>Registrarse</h1>
+        
+            @* Espacio para campo texto nombre *@
+
+            <div>
+                <label for="nombre"><b>Nombre</b></label>
+                <input type="text" placeholder="Ingresa tu nombre" name="nombre" required>
+            </div>
+
+            @* Espacio para campo texto telefono *@
+
+            <div>
+                <label for="telefono"><b>Telefono</b></label>
+                <input type="text" placeholder="Ingresa tu telefono" name="telefono" required>
+            </div>
+
+            @* Espacio para campo texto email *@
+
+            <div>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Ingresa tu email" name="email" required>
+            </div>
+
+            @* Espacio para campo texto usuario *@
+
+            <div>
+                <label for="username"><b>Usuario</b></label>
+                <input type="text" placeholder="Ingresa tu usuario" name="username" id="username" required>
+                <div class="condiciones">
+                    <p id="check-usuario">El nombre de usuario tiene que ser único</p>
+                </div>
+            </div>
+
+            @* Espacio para campo texto contraseña *@
+            
+            <div>
+                <label for="contraseña"><b>Contraseña</b></label>
+                <input type="password" placeholder="Ingresa tu contraseña" name="contraseña" id="contraseña" required>
+                <div class="condiciones">
+                    <p id="caracteres">La contraseña debe tener 8 o más caracteres</p>
+                    <p id="mayuscula">La contraseña debe tener, por lo menos 1 mayúscula</p>
+                    <p id="cespecial">La contraseña debe tener, por lo menos 1 carácter especial</p>
+                </div>
+            </div>
+
+            @* Espacio para campo texto contraseña otra vez *@
+
+            <div>
+                <label for="contraseña2"><b>Repetir Contraseña</b></label>
+                <input type="password" placeholder="Ingresa tu contraseña nuevamente" name="contraseña2" id="contraseña2" required>
+                <div class="condiciones">
+                    <p id="coincidir">Las contraseñas deben coincidir</p>
+                </div>
+            </div>
+
+            <p style="color: green;">@ViewBag.Exito</p>
+            <p id="mostrar-error" style="color: red;"></p>
+
+            <input type="submit" value="Registrarme">
+        </form>
+        
+        <h3>Ya tenes Cuenta? <a href='@Url.Action("Login", "Account")'>Iniciar Sesión</a></h3>
+    </div>
+</div>
+
+<div id="listaUsuarios" style="display: none">
+    @if(ViewBag.ListaUsuarios.Count > 0){
+        @foreach(var item in ViewBag.ListaUsuarios){
+            <p>@item.Username</p>
+        }
+    }
+</div>
+
+<script src="~/js/registro.js" asp-append-version="true"></script>
+<script src="~/js/registro2.js" asp-append-version="true"></script>

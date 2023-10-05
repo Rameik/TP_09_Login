@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"]</title>
+        <link rel="shortcut icon" href="/icon.png" type="image/x-icon">
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href='@Url.Action("Login", "Account")'>Login</a></li>
+                    <li><a href='@Url.Action("Registro", "Account")'>Registro</a></li>
+                    <li><a href='@Url.Action("OlvideContraseña", "Account")'>Olvide mi Contraseña</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div>
+            @RenderBody()
+        </div>
+
+        <footer>
+            &copy; @DateTime.Now.Year - Taller de Programación - TPLogin
+        </footer>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    </body>
+</html>
