@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_09_Login\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\TPLogin.bundle.scp.css",
+      "PackagePath": "staticwebassets\\TPLogin.bundle.scp.css"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_09_Login\\wwwroot\\BD_Login.sql",
+      "PackagePath": "staticwebassets\\BD_Login.sql"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_09_Login\\wwwroot\\css\\loginStyle.css",
+      "PackagePath": "staticwebassets\\css\\loginStyle.css"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_09_Login\\wwwroot\\css\\registroStyle.css",
+      "PackagePath": "staticwebassets\\css\\registroStyle.css"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_09_Login\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_09_Login\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_09_Login\\wwwroot\\icon.png",
+      "PackagePath": "staticwebassets\\icon.png"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_09_Login\\wwwroot\\js\\cambio-contraseña.js",
+      "PackagePath": "staticwebassets\\js\\cambio-contraseña.js"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_09_Login\\wwwroot\\js\\registro.js",
+      "PackagePath": "staticwebassets\\js\\registro.js"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_09_Login\\wwwroot\\js\\registro2.js",
+      "PackagePath": "staticwebassets\\js\\registro2.js"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_09_Login\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.TPLogin.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.TPLogin.props",
+      "PackagePath": "build\\TPLogin.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.TPLogin.props",
+      "PackagePath": "buildMultiTargeting\\TPLogin.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.TPLogin.props",
+      "PackagePath": "buildTransitive\\TPLogin.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
